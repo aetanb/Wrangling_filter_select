@@ -228,8 +228,11 @@ Comedy movies with an MPAA rating, length over 120 minutes, and have a rating ab
 3. Create a subset of only Harry Potter movies with the title, rating, budget, and votes. Which movies are included in this data? Which is highest rated? Which has the most votes on imdb.com?
 
 ```{r}
-
+movies%>%
+  filter(str_detect(title, "Harry Potter"))
 ```
+
+After running the code above, I was able to conclude that there are three movies that include "Harry Potter" in the title: Harry Potter and the Chamber of Secrets, Harry potter and the Prisoner of Azkaban, and Harry Potter and the Sorcerer's Stone. The movie with the highest rating was the Prisoner of Azkaban, whole the movie with the highest votes was The Sorcerer's Stone. 
 
 4. What is the highest budget for a movie that is an Animation or Comedy with at least 100 votes?
 
